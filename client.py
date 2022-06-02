@@ -1059,7 +1059,7 @@ def Oup(op):
                          bc = cmd.split("broadcast: ")[1]
                          groups = client.getGroupIdsJoined()
                          allGc = client.getGroups(groups)
-                         youBc = "「   Broadcast Message   」\nSender: @! \nSupport: https://{}\nBroadcasted: {} Groups\n────────────────\n{}".format(host,len(allGc),bc)
+                         youBc = "「   Broadcast Message   」".format(host,len(allGc),bc)
                          for x in range(len(allGc)):
                              client.sendMention(allGc[x].id, youBc,[mid])                           
                          client.sendReplyMessage(id,to,"Success Broadcasted on {} groups.".format(len(allGc)))
